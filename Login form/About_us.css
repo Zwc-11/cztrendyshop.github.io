@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@400;600;700&family=Poppins:wght@300&family=Spline+Sans+Mono:wght@400;700&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #1a192c;
+}
+
+header{
+    position: fixed;
+    backdrop-filter: contrast(110%);
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 99;
+}
+
+.name-container{
+    overflow: hidden;
+}
+
+.name-container .text{
+    position: relative;
+    color: #4070f4;
+    font-size: 30px;
+    font-weight: 600;
+
+}
+
+.name-container .text.first-text{
+    color: rgba(82, 255, 122, 1);
+}
+.name-container .text.sec-text{
+    animation: animateColor 1.5s linear infinite, 
+    animateSide 1.5s linear infinite;
+    animation-delay: calc(0.1s * var(--i));
+}
+
+.text.sec-text::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    background: #000;
+    border-left: 2px solid #4070f4;
+    animation: textanimate 4s steps(12) infinite;
+
+}
+
+@keyframes textanimate{
+    40%,60%{
+        left: 100%;
+    }
+    100%{
+        left: 0%;
+    }
+}
+
+.navigation a{
+    position: relative;
+    font-size: 1.1em;
+    color: rgb(255, 153, 153);
+    text-decoration: none;
+    font-weight: 800;
+    margin-left: 40px;
+    
+}
+.navigation a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: rgb(0, 153, 204);
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+
+.navigation a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+.navigation .btnLogin-pop{
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: 0.5s; 
+}
+.navigation .btnLogin-pop:hover{
+    background: #fff;
+    color: #162938;
+}
+
+.about{
+
+    width: 100%;
+    height: 100vh;
+    padding: 78px 0;
+    background-color: #191919;
+}
+
+
+.about img{
+    height: auto;
+    width: auto;
+}
+
+.about-txt{
+    width: 550px;
+}
+
+.main{
+    width: 1130%;
+    max-width: 95%;
+    margin: 10rem 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.about-txt h1{
+    color: #fff;
+    font-size: 80px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.about-txt h5{
+    color: #fff;
+    font-size: 25px;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+
+.about-txt p{
+    color: #fcfc;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    margin-bottom: 45px;
+}
+
+button{
+    background: #f9004d;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 30px;
+    transition: 0.4s;
+}
+
+button:hover{
+    background: transparent;
+    border: 2px solid #f9004d;
+}

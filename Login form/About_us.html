@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About Us</title>
+        
+        <link rel="stylesheet" href="About_us.css">
+        <!--font awesome-->
+        <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header>
+            <div class="name-container">
+                <span class="text sec-text">CZ Trendy Shop</span>
+            </div>
+            <!-- <h2 data-text = "Caesar"class="Myname">Caesar</h2> -->
+            <nav class="navigation">
+                <a href="E:\Visual studio code CZ\Microsoft VS Code\bin\Website design assignment code\Login form\Homepage.html">Home</a>
+                <a href="E:\Visual studio code CZ\Microsoft VS Code\bin\Website design assignment code\Login form\Productpage.html">Product</a>
+                <a href="E:\Visual studio code CZ\Microsoft VS Code\bin\Website design assignment code\Login form\About_us.html">About Us</a>
+                <a href="E:\Visual studio code CZ\Microsoft VS Code\bin\Website design assignment code\Login form\Contact_page.html">Contact</a>
+                <button class="btnLogin-pop" onclick="myFunction()" >Login</button>
+                <script>
+                    function myFunction(){
+                        window.location.href="login_register.html";
+                    }
+                </script>
+            </nav>
+        </header>
+        <div class="about">
+            <div class="main">
+                <img class = "About-us-img"src="E:\Visual studio code CZ\Microsoft VS Code\bin\Website design assignment code\About_us_img.png" alt="">
+                <div class="about-txt">
+                    <h1>About Us</h1>
+                    <h5>CZ Trendy Shop</h5>
+                    <p>At trendy stores, you'll find the latest and most stylish fashion pieces that are sure to make you stand out from the crowd. From on-trend clothing to accessories that will complete your look, these stores are the go-to destinations for anyone looking to update their wardrobe with the latest fashion trends. With a constantly evolving inventory, trendy stores offer a wide range of options to cater to different tastes and preferences. Whether you're looking for classic and timeless pieces or bold and daring designs, you're sure to find something that speaks to your personal style. So why settle for boring and outdated fashion when you can shop at trendy stores and be the envy of all your friends? </p>
+                    <button class = "aboutusbutton" type="button">Join Us!</button>
+                </div>
+            </div>
+        </div>
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script>
+            const sr = ScrollReveal({
+                            origin: 'bottom',
+                            distance: '60px',
+                            duration: 2500,
+            })
+            sr.reveal('.about-txt', {distance: '120px', delay: 400})
+            sr.reveal('.aboutusbutton', {delay: 1000})
+            sr.reveal('.About-us-img', {delay: 1200})
+        </script>
+    </body>
+
+    
+</html>
